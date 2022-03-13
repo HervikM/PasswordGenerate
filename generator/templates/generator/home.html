@@ -1,0 +1,43 @@
+
+{% extends 'generator/layout.html' %} {% block content %}
+<div class="mb-3">
+    <form action="{% url 'password' %}" class="card card-body m-5 p-5 " >
+        <h1>Password Generator</h1>
+
+        <label for="length">Select the length of your password:</label>
+        <select name="length" id="length" class="form-control my-3">
+            <option value="8">8 Character</option>
+            <option value="9">9 Character</option>
+            <option value="10">10 Character</option>
+            <option value="11">11 Character</option>
+            <option value="12">12 Character</option>
+            <option value="13">13 Character</option>
+            <option value="14">14 Character</option>
+            <option value="15">15 Character</option>
+            <option value="16">16 Character</option>
+            <option value="17">17 Character</option>
+        </select>
+
+        <div class="form-check form-switch my-1">
+            <input class="form-check-input" type="checkbox" name="uppercase" id="uppercase">
+            <label class="form-check-label" for="uppercase">Uppercase</label>
+        </div>
+
+        <div class="form-check form-switch my-1">
+            <label class="form-check-label" for="numbers">Numbers</label>
+            <input class="form-check-input" type="checkbox" name="numbers" id="numbers">
+        </div>
+
+        <div class="form-check form-switch my-1">
+            <label class="form-check-label" for="special">Special Characters</label>
+            <input class="form-check-input" type="checkbox" name="special" id="special">
+        </div>
+
+        <div class="form-check form-switch my-3">
+        <button  class="btn btn-primary ">Generate Password</button>
+
+    </form>
+</div>
+
+
+{% endblock  %}
